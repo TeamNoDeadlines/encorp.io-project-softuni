@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CancelComponent } from './cancel/cancel.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SuccessComponent } from './success/success.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
   },
   { path: 'cancel', component: CancelComponent },
   { path: 'success', component: SuccessComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
