@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { CancelComponent } from './cancel/cancel.component';
 import { SuccessComponent } from './success/success.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CancelComponent,
     SuccessComponent,
     CheckoutComponent,
+    ClientDashboardComponent,
   ],
   imports: [
     BrowserModule,
