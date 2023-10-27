@@ -28,13 +28,17 @@ export class CheckoutComponent {
     const stripe = await this.stripePromise;
 
     // this is a normal http calls for a backend api
-    this.http
-      .post(`${environment.serverUrl}/payment`, payment)
-      .subscribe((data: any) => {
-        // I use stripe to redirect To Checkout page of Stripe platform
-        stripe?.redirectToCheckout({
-          sessionId: data.id,
+    if (stripe) { // Check if stripe is not null or undefined
+      this.http
+        .post(`${environment.serverUrl}/payment`, payment)
+        .subscribe((data: any) => {
+          stripe.redirectToCheckout({
+            sessionId: data.id,
+          });
         });
-      });
+    } else {
+      console.error('Stripe is not available');
+      // Handle the case where Stripe is not available
+    }
   }
 }
