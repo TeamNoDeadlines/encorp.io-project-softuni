@@ -2,7 +2,7 @@ package com.NoDeadlines.SoftUniFestApp2023.dto;
 
 import java.util.Objects;
 
-public abstract class UserDTO {
+public  class UserDTO {
     private int id;
     private String email;
     private String password;

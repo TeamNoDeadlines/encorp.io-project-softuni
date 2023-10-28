@@ -1,10 +1,18 @@
-package com.NoDeadlines.SoftUniFestApp2023.mapper;
+package com.NoDeadlines.SoftUniFestApp2023.models.mapper;
 
 import com.NoDeadlines.SoftUniFestApp2023.models.DTOs.*;
 import com.NoDeadlines.SoftUniFestApp2023.models.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 
 public class ModelMapper {
 
+//    @Autowired
+    public ModelMapper() {
+
+    }
 //    public UserDTO toUserDTO(User user) {
 //        UserDTO userDTO = new UserDTO();
 //        userDTO.setId(user.getId());
@@ -13,6 +21,45 @@ public class ModelMapper {
 //        return userDTO;
 //    }
 
+
+    public ClientUser toClientUser(ClientUserDTO clientUserDTO) {
+        ClientUser clientUser = new ClientUser();
+        clientUser.setId(clientUserDTO.getId());
+        clientUser.setEmail(clientUserDTO.getEmail());
+        clientUser.setPassword(clientUserDTO.getPassword());
+        clientUser.setFirstName(clientUserDTO.getFirstName());
+        clientUser.setLastName(clientUserDTO.getLastName());
+        return clientUser;
+    }
+
+    public BusinessUser toBusinessUser(BusinessUserDTO businessUserDTO) {
+        BusinessUser businessUser = new BusinessUser();
+        businessUser.setId(businessUserDTO.getId());
+        businessUser.setEmail(businessUserDTO.getEmail());
+        businessUser.setPassword(businessUserDTO.getPassword());
+        businessUser.setName(businessUserDTO.getName());
+        return businessUser;
+    }
+
+    public Product toProduct(ProductDTO productDTO) {
+        Product product = new Product();
+        product.setId(productDTO.getId());
+        product.setPrice(productDTO.getPrice());
+        product.setProductName(productDTO.getProductName());
+        product.setDescription(productDTO.getDescription());
+        // ... set other attributes as needed
+        return product;
+    }
+
+    public StripeTransaction toStripeTransaction(StripeTransactionDTO stripeTransactionDTO) {
+        StripeTransaction stripeTransaction = new StripeTransaction();
+        stripeTransaction.setId(stripeTransactionDTO.getId());
+        stripeTransaction.setBusinessUser(toBusinessUser(stripeTransactionDTO.getBusinessUser()));
+        stripeTransaction.setClientUser(toClientUser(stripeTransactionDTO.getClientUser()));
+        stripeTransaction.setProduct(toProduct(stripeTransactionDTO.getProduct()));
+        // ... set other attributes as needed
+        return stripeTransaction;
+    }
     public ClientUserDTO toClientUserDTO(ClientUser clientUser) {
         ClientUserDTO clientUserDTO = new ClientUserDTO();
         clientUserDTO.setId(clientUser.getId());
