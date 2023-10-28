@@ -3,8 +3,9 @@ package com.NoDeadlines.SoftUniFestApp2023.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.NoDeadlines.SoftUniFestApp2023.models.CheckoutPayment;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import models.CheckoutPayment;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
