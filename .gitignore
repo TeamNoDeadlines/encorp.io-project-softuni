@@ -13,3 +13,6 @@ build/
 .DS_Store
 node_modules
 .angular
+buildOutputCleanup.lock
+outputFiles.bin 
+previous-compilation-data.bin
