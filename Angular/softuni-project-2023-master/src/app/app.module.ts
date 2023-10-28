@@ -10,6 +10,21 @@ import { AppComponent } from './app.component';
 import { CancelComponent } from './cancel/cancel.component';
 import { SuccessComponent } from './success/success.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+<<<<<<< HEAD:Angular/softuni-project-2023-master/src/app/app.module.ts
+=======
+import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { LoginComponent } from './login/login.component';
+import { MatIconModule } from '@angular/material/icon';
+import { NavComponent } from './nav/nav.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions } from '@angular/material/form-field';
+import { MatFormFieldAppearance } from '@angular/material/form-field';
+import { ThemePalette } from '@angular/material/core';
+import { FooterComponent } from './footer/footer.component';
+
+>>>>>>> 95a2d7c (adding client dash, nav, footer, prod. service):src/app/app.module.ts
 
 @NgModule({
   declarations: [
@@ -17,6 +32,14 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CancelComponent,
     SuccessComponent,
     CheckoutComponent,
+<<<<<<< HEAD:Angular/softuni-project-2023-master/src/app/app.module.ts
+=======
+    ClientDashboardComponent,
+    LoginComponent,
+    FooterComponent,
+
+
+>>>>>>> 95a2d7c (adding client dash, nav, footer, prod. service):src/app/app.module.ts
   ],
   imports: [
     BrowserModule,
@@ -26,8 +49,19 @@ import { CheckoutComponent } from './checkout/checkout.component';
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
+<<<<<<< HEAD:Angular/softuni-project-2023-master/src/app/app.module.ts
+=======
+    MatToolbarModule,
+    MatIconModule,
+    NavComponent,
+    FormsModule, 
+    ReactiveFormsModule,
+MatFormFieldModule,
+
+
+>>>>>>> 95a2d7c (adding client dash, nav, footer, prod. service):src/app/app.module.ts
   ],
-  providers: [],
+  providers: [ {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
