@@ -1,4 +1,5 @@
 package com.NoDeadlines.SoftUniFestApp2023.models;
+
 import jakarta.persistence.*;
 
 import java.util.Objects;
@@ -20,6 +21,18 @@ public class Product {
 
     @Column(name = "description")
     private String description;
+
+    @Column(name = "image_url")
+    private String imageUrl;
+
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     public int getId() {
         return id;

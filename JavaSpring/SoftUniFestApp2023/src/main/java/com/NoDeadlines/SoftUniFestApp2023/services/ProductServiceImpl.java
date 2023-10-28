@@ -25,4 +25,9 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> getProducts(int amount) {
         return repository.getProducts(amount);
     }
+
+    @Override
+    public void createProduct(Product product) {
+        repository.createProduct(product);
+    }
 }
