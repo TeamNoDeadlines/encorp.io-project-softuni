@@ -1,2 +1,13 @@
+# Gradle files
+.gradle/
+build/
+
+# OS-specific files
+.DS_Store
+
+# IDE-specific files (assuming you're using IntelliJ)
+.idea/
+*.iml
+0
 .DS_Store
 .DS_Store
