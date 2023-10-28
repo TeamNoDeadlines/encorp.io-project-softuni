@@ -19,9 +19,11 @@
 .search-field-input:focus {
   outline-width: 0;
 }
-.search-icon {
+
+img.search-icon {
   height: 24px;
   border: 0px;
+  fill: rgb(255, 119, 50);
 }
 .icon-btn {
   border: 0px;

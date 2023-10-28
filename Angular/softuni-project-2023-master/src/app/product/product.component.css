@@ -1,0 +1,18 @@
+.product-card{
+    width: 100%;
+    padding:20px;
+
+}
+
+.product-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.product-img {
+    width: 80%;
+}
+
+.product-price:after{
+    content: '.00 лв.';
+}

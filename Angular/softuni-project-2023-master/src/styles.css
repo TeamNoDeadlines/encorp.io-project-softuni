@@ -1,5 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600&family=DM+Serif+Display&display=swap');
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; max-width: 1440px; margin: auto }
+body { margin: 0; font-family: DM Sans, "Helvetica Neue", sans-serif; max-width: 1440px; margin: auto }
+
+
+.form-container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin:100px auto;
+}
+
+.form-container * {
+   margin: 8px;
+
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-h2{
+    align-self: center;
+}
+.form-group input,
+.form-group textarea {
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid rgb(219, 218, 218);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+outline-width: 0;
+}
+.form-group button {
+    padding: 8px;
+}
+.btn {
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: rgb(255, 119, 50);
+    border: 0px;
+    border-radius: 8px;
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.btn-secondary {
+    color: rgb(255, 119, 50);
+    border: 0px;
+    border-radius: 8px;
+    font-size: 18px;
+}

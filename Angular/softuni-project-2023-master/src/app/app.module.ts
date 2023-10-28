@@ -9,6 +9,11 @@ import { SuccessComponent } from './success/success.component';
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductComponent } from './product/product.component';
+import { BusinessDashboardComponent } from './business-dashboard/business-dashboard.component';
+import { CreateProductComponent } from './create-product/create-product.component';
+import { FormsModule } from '@angular/forms';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +22,13 @@ import { FooterComponent } from './footer/footer.component';
     SuccessComponent,
     ClientDashboardComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    ProductComponent,
+    BusinessDashboardComponent,
+    CreateProductComponent,
+AuthComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, HttpClientModule, FormsModule],
   bootstrap: [AppComponent],
 
 })
