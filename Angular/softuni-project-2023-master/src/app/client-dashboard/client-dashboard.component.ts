@@ -38,10 +38,10 @@ export class ClientDashboardComponent {
     };
 
     const stripe = await this.stripePromise;
-
+   
     // this is a normal http calls for a backend api
     this.http
-      .post(`${environment.serverUrl}/payment`, payment)
+    .post('http://localhost:8888/api/payment', payment) 
       .subscribe((data: any) => {
         // I use stripe to redirect To Checkout page of Stripe platform
         stripe?.redirectToCheckout({
