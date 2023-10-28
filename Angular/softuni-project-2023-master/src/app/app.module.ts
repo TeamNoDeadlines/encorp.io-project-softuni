@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CancelComponent } from './cancel/cancel.component';
 import { SuccessComponent } from './success/success.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -16,7 +15,6 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     CancelComponent,
     SuccessComponent,
-    CheckoutComponent,
     ClientDashboardComponent,
     FooterComponent,
     NavComponent
