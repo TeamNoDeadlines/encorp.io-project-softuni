@@ -34,7 +34,10 @@ public class ProductController {
     service.createProduct(newProduct);
     }
 
-
+@GetMapping ("/allproducts/{businessuser}")
+    public List<Product> getProductsByBusinessUser (@PathVariable String businessuser){
+    return service.getProductsByBusinessUser(businessuser);
+}
 
 
 }

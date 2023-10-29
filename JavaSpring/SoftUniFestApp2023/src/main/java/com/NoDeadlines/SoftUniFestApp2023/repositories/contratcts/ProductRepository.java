@@ -10,4 +10,6 @@ public interface ProductRepository {
 
 
     public void createProduct(Product product);
+
+    public List<Product> getProductsByBusinessUser(String businessUserName);
 }

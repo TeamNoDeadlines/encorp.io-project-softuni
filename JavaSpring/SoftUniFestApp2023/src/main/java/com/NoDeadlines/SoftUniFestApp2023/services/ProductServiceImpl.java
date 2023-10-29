@@ -30,4 +30,10 @@ public class ProductServiceImpl implements ProductService {
     public void createProduct(Product product) {
         repository.createProduct(product);
     }
+
+
+    @Override
+    public List<Product> getProductsByBusinessUser(String businessUserName) {
+        return repository.getProductsByBusinessUser(businessUserName);
+    }
 }

@@ -42,4 +42,23 @@ public class ProductRepositoryImpl implements ProductRepository {
             session.save(product);
         }
     }
+
+
+    public List<Product> getProductsByBusinessUser(String businessUserName) {
+        try (Session session = sessionFactory.openSession()) {
+            Query<Product> query = session.createQuery(
+                    "select p from Product p " +
+                            "where exists (" +
+                            "    select 1 from BusinessUser bu, BusinessProduct bp " +
+                            "    where bu.name = :businessUserName " +
+                            "    and bu.id = bp.businessUser.id" +
+                            "    and bp.product.id = p.id" +
+                            ")",
+                    Product.class
+            );
+            query.setParameter("businessUserName", businessUserName);
+
+            return query.getResultList();
+        }
+    }
 }
