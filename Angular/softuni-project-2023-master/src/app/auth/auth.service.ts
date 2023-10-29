@@ -8,7 +8,7 @@ export class AuthService {
 authData: Auth;
   constructor(private http: HttpClient) {}
   signin(email: string, password: string) {
-    this.http.get<Auth>('http://localhost:8888/api/authentication/login', {headers: new HttpHeaders({'AUTHORIZATION': `${email} ${password}` || ''})})
+   this.http.get<Auth>('http://localhost:8888/api/authentication/login', {headers: new HttpHeaders({'AUTHORIZATION': `${email} ${password}` || ''})})
       .subscribe(
         data => this.authData = data
       );

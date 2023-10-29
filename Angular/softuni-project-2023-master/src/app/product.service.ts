@@ -9,8 +9,12 @@ export class ProductService {
   // products: Product[]
   
 
-  public getProducts() {
+  public getProductsForClient() {
     return this.http.get<Product[]>('http://localhost:8888/api/products/8')
+  }
+
+  public getProductsFromCompany(companyName: string) {
+    return this.http.get<Product[]>(`http://localhost:8888/api/allproducts/${companyName}`)
   }
 
   public postProduct(product: Product) {

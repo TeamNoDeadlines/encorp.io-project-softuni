@@ -1,0 +1,75 @@
+.search-field {
+    height: 46px;
+    width: 100%;
+    margin-top: 30px;
+    border: 0px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(240, 240, 240);
+  }
+  
+  .search-field-input {
+    padding-left: 10px;
+    width: 100%;
+    border: 0px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 8px;
+  }
+  .search-field-input:focus {
+    outline-width: 0;
+  }
+  
+  img.search-icon {
+    height: 24px;
+    border: 0px;
+    fill: rgb(255, 119, 50);
+  }
+  .icon-btn {
+    border: 0px;
+    border-radius: 8px;
+  }
+  .hero-section {
+    position: relative;
+    height: 600px;
+  }
+  
+  .hero-img {
+    margin-top: 50px;
+    width: 100%;
+    max-height: 600px;
+  }
+  .hero-h1 {
+      position: absolute;
+      left: 50px;
+      top: 200px;
+    font-size: 60px;
+    font-family: DM Sans;
+    font-weight: 900;
+  }
+  .product-grid {
+    display: grid;
+    margin-top: 120px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+  }
+
+  .product-card{
+      width: 100%;
+      padding:20px;
+  
+  }
+  
+  .product-info{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+  .product-img {
+      width: 80%;
+  }
+  
+  .product-price:after{
+      content: '.00 лв.';
+  }
+

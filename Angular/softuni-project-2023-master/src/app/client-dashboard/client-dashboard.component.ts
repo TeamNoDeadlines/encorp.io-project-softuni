@@ -18,7 +18,7 @@ export class ClientDashboardComponent {
   // selectedCompany: any;
 
   products: Product[] = [];
-  stripePromise = loadStripe(environment.stripe);
+  // stripePromise = loadStripe(environment.stripe);
   //  products: Product[] = [
   //   {
   //     id: 1,
@@ -108,7 +108,7 @@ export class ClientDashboardComponent {
   // }
 
   ngOnInit() {
-    this.productService.getProducts().subscribe( products => {
+    this.productService.getProductsForClient().subscribe( products => {
       this.products = products
       console.log(products)
     })
