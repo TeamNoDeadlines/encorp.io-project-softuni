@@ -19,7 +19,7 @@ export class ProductComponent {
 async pay(): Promise<void> {
     // here we create a payment object
     const payment = {
-      name: this.product.product_name,
+      name: this.product.productName,
       currency: 'bgn',
       // amount on cents *10 => to be on dollar
       amount: this.product.price * 100,

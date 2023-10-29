@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ViewEncapsulation } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -9,6 +10,7 @@ import { ViewEncapsulation } from '@angular/core';
 })
 
 export class AuthComponent {
+  constructor(private authService: AuthService){}
   isLoginMode = true;
 
   onSwitchMode() {
@@ -16,7 +18,7 @@ export class AuthComponent {
   }
 
   onSubmit(form: NgForm) {
-    console.log(form.value);
+    this.authService.signin(form.value.email, form.value.password)
     form.reset();
   }
 }

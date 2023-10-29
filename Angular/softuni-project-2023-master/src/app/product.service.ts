@@ -9,9 +9,9 @@ export class ProductService {
   // products: Product[]
   
 
-  // public getProducts() {
-  //   return this.http.get<Product[]>('http://localhost:8888/api/products/7')
-  // }
+  public getProducts() {
+    return this.http.get<Product[]>('http://localhost:8888/api/products/8')
+  }
 
   public postProduct(product: Product) {
     this.http

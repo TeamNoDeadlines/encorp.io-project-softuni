@@ -11,14 +11,14 @@ import { Product } from '../models/product';
 export class CreateProductComponent {
 
   constructor(private productService: ProductService){}
-  newProduct: Product = { product_name: '', price: 0, description: '', image_url: '', product_id: 0 };
+  newProduct: Product = { productName: '', price: 0, description: '', imageUrl: '', id: 0 };
 
   onSubmit(form: NgForm) {
-    this.newProduct.product_name = form.value.name;
+    this.newProduct.productName = form.value.name;
     this.newProduct.price = +form.value.price
     this.newProduct.description = form.value.description;
-    this.newProduct.image_url = form.value.image_url;
-    this.newProduct.product_id = Math.random()
+    this.newProduct.imageUrl = form.value.image_url;
+    this.newProduct.id = Math.random()
     console.log(this.newProduct);
 
 this.productService.postProduct(this.newProduct)
