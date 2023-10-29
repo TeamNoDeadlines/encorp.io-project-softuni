@@ -5,10 +5,13 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "business_user")
+@PrimaryKeyJoinColumn(name = "user_id")
 public class BusinessUser extends User {
 
     @Column(name = "name")
     private String name;
+
+
 
     public String getName() {
         return name;

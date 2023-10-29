@@ -3,6 +3,7 @@ package com.NoDeadlines.SoftUniFestApp2023.services;
 
 import com.NoDeadlines.SoftUniFestApp2023.exceptions.ForbiddenActionException;
 import com.NoDeadlines.SoftUniFestApp2023.exceptions.UnauthorizedOperationException;
+import com.NoDeadlines.SoftUniFestApp2023.models.BusinessUser;
 import com.NoDeadlines.SoftUniFestApp2023.models.User;
 
 import com.NoDeadlines.SoftUniFestApp2023.models.UserSession;
@@ -35,7 +36,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public UserSession login(String username, String password) {
 
-        User user = userRepository.get(username);
+        BusinessUser user = userRepository.get(username);
         if(!user.getPassword().equals(password))
             throw new UnauthorizedOperationException("Password mismatch");
         UserSession session = repository.getSession(user.getId());
