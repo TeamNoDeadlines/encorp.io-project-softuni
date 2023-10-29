@@ -17,9 +17,65 @@ export class ClientDashboardComponent {
   // companies: any[] = [];
   // selectedCompany: any;
 
-  products: Product[] = [];
+  // products: Product[] = [];
   // stripePromise = loadStripe(environment.stripe);
-
+   products: Product[] = [
+    {
+      product_id: 1,
+      product_name: 'Слушалки',
+      description:
+        " With up to 60 Hours of listening time of our over ear headphones in Bluetooth mode, triple as much as other Bluetooth headphones, you'll always have music to inspire you. Come with a 3.5mm audio cable, regardless of whether you want to use wireless headset or wired headphones, Tuitager Bluetooth headset can satisfy you.",
+      price: 23,
+      image_url: 'https://www.boat-lifestyle.com/cdn/shop/products/eb8e0fbd-c412-48b3-9c91-5b49ddf35800_288x.png?v=1673002681',
+    },
+    {
+      product_id: 2,
+      product_name: 'Слушалки',
+      description:
+        " With up to 60 Hours of listening time of our over ear headphones in Bluetooth mode, triple as much as other Bluetooth headphones, you'll always have music to inspire you. Come with a 3.5mm audio cable, regardless of whether you want to use wireless headset or wired headphones, Tuitager Bluetooth headset can satisfy you.",
+      price: 60,
+      image_url: 'https://www.energysistem.com/cdnassets/products/45305/principal_2000.jpg',
+    },
+    {
+      product_id: 3,
+      product_name: 'Слушалки',
+      description:
+        " With up to 60 Hours of listening time of our over ear headphones in Bluetooth mode, triple as much as other Bluetooth headphones, you'll always have music to inspire you. Come with a 3.5mm audio cable, regardless of whether you want to use wireless headset or wired headphones, Tuitager Bluetooth headset can satisfy you.",
+      price: 125,
+      image_url: 'https://www.marshallheadphones.com/on/demandware.static/-/Sites-zs-master-catalog/default/dw1394819b/images/marshall/headphones/monitor-ii-anc/large/mh-monitor-II-ANC-large-1.png',
+    },
+    {
+      product_id: 4,
+      product_name: 'Слушалки',
+      description:
+        " With up to 60 Hours of listening time of our over ear headphones in Bluetooth mode, triple as much as other Bluetooth headphones, you'll always have music to inspire you. Come with a 3.5mm audio cable, regardless of whether you want to use wireless headset or wired headphones, Tuitager Bluetooth headset can satisfy you.",
+      price: 240,
+      image_url: 'https://cdn11.bigcommerce.com/s-k11cg5mzh9/images/stencil/500x659/products/437/135112/fc0078efc5dd4e2b579dd153ea420bc4865818c9cfeab31652d4e20abdd9a3ee__47840.1698434077.png?c=2',
+    },{
+      product_id: 5,
+      product_name: 'Слушалки',
+      description:
+        " With up to 60 Hours of listening time of our over ear headphones in Bluetooth mode, triple as much as other Bluetooth headphones, you'll always have music to inspire you. Come with a 3.5mm audio cable, regardless of whether you want to use wireless headset or wired headphones, Tuitager Bluetooth headset can satisfy you.",
+      price: 23,
+      image_url: 'https://www.boat-lifestyle.com/cdn/shop/products/eb8e0fbd-c412-48b3-9c91-5b49ddf35800_288x.png?v=1673002681',
+    },
+    {
+      product_id: 6,
+      product_name: 'Слушалки',
+      description:
+        " With up to 60 Hours of listening time of our over ear headphones in Bluetooth mode, triple as much as other Bluetooth headphones, you'll always have music to inspire you. Come with a 3.5mm audio cable, regardless of whether you want to use wireless headset or wired headphones, Tuitager Bluetooth headset can satisfy you.",
+      price: 60,
+      image_url: 'https://www.energysistem.com/cdnassets/products/45305/principal_2000.jpg',
+    },
+    {
+      product_id: 7,
+      product_name: 'Слушалки',
+      description:
+        " With up to 60 Hours of listening time of our over ear headphones in Bluetooth mode, triple as much as other Bluetooth headphones, you'll always have music to inspire you. Come with a 3.5mm audio cable, regardless of whether you want to use wireless headset or wired headphones, Tuitager Bluetooth headset can satisfy you.",
+      price: 125,
+      image_url: 'https://www.marshallheadphones.com/on/demandware.static/-/Sites-zs-master-catalog/default/dw1394819b/images/marshall/headphones/monitor-ii-anc/large/mh-monitor-II-ANC-large-1.png',
+    },
+  ];
   constructor(
     private http: HttpClient,
     private companyService: CompanyService,
@@ -52,10 +108,10 @@ export class ClientDashboardComponent {
   // }
 
   ngOnInit() {
-    this.productService.getProducts().subscribe( products => {
-      this.products = products
-      console.log(products)
-    })
+    // this.productService.getProducts().subscribe( products => {
+    //   this.products = products
+    //   console.log(products)
+    // })
   }
   searchCompanies(searchTerm: string) {
     // Implement search logic using the company service
@@ -69,5 +125,4 @@ export class ClientDashboardComponent {
     // this.selectedCompany = company;
   }
 
- 
 }
