@@ -51,11 +51,11 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
      public List<BusinessUser> getBusinessUsers( ){
         try (Session session = sessionFactory.openSession()) {
-//            Query<BusinessUser> query = session.createQuery("from business_user", BusinessUser.class);
-//            return query.list();
-            NativeQuery<BusinessUser> query = session.createNativeQuery("select * \n" +
-                                                                            "FROM business_user " )   ;
-            return query.getResultList();
+            Query<BusinessUser> query = session.createQuery("from BusinessUser ", BusinessUser.class);
+            return query.list();
+//            NativeQuery<BusinessUser> query = session.createNativeQuery("select * \n" +
+//                                                                            "FROM business_user " )   ;
+//            return query.getResultList();
         }
     }
 
