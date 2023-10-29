@@ -34,8 +34,18 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User get(String username) {
-        return new User() ;
+    public BusinessUser get(String email) {
+        try (Session session = sessionFactory.openSession()) {
+            Query<BusinessUser> query = session.createQuery("from BusinessUser where email = :email", BusinessUser.class);
+            query.setParameter("email", email);
+
+            List<BusinessUser> resultList = query.getResultList();
+            if (resultList.isEmpty()) {
+                return null; // or Optional.empty() if you prefer to return an Optional
+            } else {
+                return resultList.get(0); // Assuming email is unique and we are only interested in the first result
+            }
+        }
     }
 
     @Override

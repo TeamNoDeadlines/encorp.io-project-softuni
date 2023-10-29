@@ -36,5 +36,10 @@ public class ProductRepositoryImpl implements ProductRepository {
 //        }
     }
 
-
+    @Override
+    public void createProduct(Product product) {
+        try (Session session = sessionFactory.openSession()) {
+            session.save(product);
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package com.NoDeadlines.SoftUniFestApp2023.controllers;
 
+import com.NoDeadlines.SoftUniFestApp2023.models.DTOs.ProductDTO;
 import com.NoDeadlines.SoftUniFestApp2023.models.Product;
 import com.NoDeadlines.SoftUniFestApp2023.models.mapper.ModelMapper;
 import com.NoDeadlines.SoftUniFestApp2023.services.contracts.ProductService;
@@ -26,4 +27,14 @@ public class ProductController {
     public List<Product> getProductsByAmount(@PathVariable int amount) {
         return service.getProducts(amount);
     }
+
+    @PostMapping("/product")
+    public  void createProduct (@RequestBody ProductDTO productDto){
+   Product newProduct =  mapper.toProduct(productDto)  ;
+    service.createProduct(newProduct);
+    }
+
+
+
+
 }

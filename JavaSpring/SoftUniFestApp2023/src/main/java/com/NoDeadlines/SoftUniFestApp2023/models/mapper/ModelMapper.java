@@ -2,7 +2,6 @@ package com.NoDeadlines.SoftUniFestApp2023.models.mapper;
 
 import com.NoDeadlines.SoftUniFestApp2023.models.DTOs.*;
 import com.NoDeadlines.SoftUniFestApp2023.models.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -45,9 +44,9 @@ public class ModelMapper {
         Product product = new Product();
         product.setId(productDTO.getId());
         product.setPrice(productDTO.getPrice());
-        product.setProductName(productDTO.getProductName());
+        product.setProductName(productDTO.getProduct_name());
         product.setDescription(productDTO.getDescription());
-        // ... set other attributes as needed
+        product.setImageUrl(productDTO.getImage_url());
         return product;
     }
 
@@ -83,7 +82,7 @@ public class ModelMapper {
         ProductDTO productDTO = new ProductDTO();
         productDTO.setId(product.getId());
         productDTO.setPrice(product.getPrice());
-        productDTO.setProductName(product.getProductName());
+        productDTO.setProduct_name(product.getProductName());
         productDTO.setDescription(product.getDescription());
         return productDTO;
     }
@@ -104,7 +103,7 @@ public class ModelMapper {
     public static ProductDTO convertToDto(Product product) {
         ProductDTO dto = new ProductDTO();
         dto.setId(product.getId());
-        dto.setProductName(product.getProductName());
+        dto.setProduct_name(product.getProductName());
         dto.setDescription(product.getDescription());
         dto.setPrice(product.getPrice());
         return dto;
@@ -113,7 +112,7 @@ public class ModelMapper {
     public static Product convertToEntity(ProductDTO dto) {
         Product product = new Product();
         product.setId(dto.getId());
-        product.setProductName(dto.getProductName());
+        product.setProductName(dto.getProduct_name());
         product.setDescription(dto.getDescription());
         product.setPrice(dto.getPrice());
         return product;

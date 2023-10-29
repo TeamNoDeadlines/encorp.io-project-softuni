@@ -12,7 +12,7 @@ public interface UserRepository {
     // User methods
 
     public User get(int id);
-    User get(String username);
+    BusinessUser get(String username);
 
     List<BusinessUser> getBusinessUsers();
 

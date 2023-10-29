@@ -5,6 +5,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "client_user")
+@PrimaryKeyJoinColumn(name = "user_id")
 public class ClientUser extends User {
 
     @Column(name = "first_name")
